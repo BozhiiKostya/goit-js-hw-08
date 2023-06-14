@@ -25,7 +25,7 @@ function storageHaveValue() {
   let parseLocalKey = {};
   if (localStorage.getItem(LOCALSTORAGE_KEY)) {
     parseLocalKey = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
-    messageInput.textContent = parseLocalKey.message;
-    emailInput.value = parseLocalKey.email;
+    messageInput.textContent = parseLocalKey.message || '';
+    emailInput.value = parseLocalKey.email || '';
   }
 }
